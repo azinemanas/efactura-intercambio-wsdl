@@ -60,7 +60,7 @@
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="RespuestaSobre">
-    <wsdl:part element="ns1:Sobre" name="parameters">
+    <wsdl:part element="ns1:RespuestaSobre" name="parameters">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="RespuestaSobreResponse">
