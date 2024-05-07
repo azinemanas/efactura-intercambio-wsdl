@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://intercambio.dgi.gub.uy/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://intercambio.efactura.dgi.gub.uy" name="EFacturaIntercambioImplService" targetNamespace="http://intercambio.dgi.gub.uy/">
+  <wsdl:import location="http://127.0.0.1:1234/ePrueba/ws_eprueba?wsdl=EFacturaIntercambioSoapPort.wsdl" namespace="http://intercambio.efactura.dgi.gub.uy">
+    </wsdl:import>
+  <wsdl:binding name="EFacturaIntercambioImplServiceSoapBinding" type="ns1:EFacturaIntercambioSoapPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="RespuestaSobre">
+      <soap:operation soapAction="http://intercambio.efactura.dgi.gub.uy/RespuestaSobre" style="document"/>
+      <wsdl:input name="RespuestaSobre">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="RespuestaSobreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sobre">
+      <soap:operation soapAction="http://intercambio.efactura.dgi.gub.uy/Sobre" style="document"/>
+      <wsdl:input name="Sobre">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="SobreResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EFacturaIntercambioImplService">
+    <wsdl:port binding="tns:EFacturaIntercambioImplServiceSoapBinding" name="EFacturaIntercambioImplPort">
+      <soap:address location="http://127.0.0.1:1234/ePrueba/ws_eprueba"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
