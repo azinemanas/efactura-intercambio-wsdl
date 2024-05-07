@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://intercambio.efactura.dgi.gub.uy" name="EFacturaIntercambioSoapPort" targetNamespace="http://intercambio.efactura.dgi.gub.uy">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://efactura.dgi.gub.uy" elementFormDefault="qualified" targetNamespace="http://intercambio.efactura.dgi.gub.uy" version="1.0">
+
+  <xs:import namespace="http://efactura.dgi.gub.uy"/>
+
+  <xs:element name="RespuestaSobre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Datain" type="ns1:Data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RespuestaSobreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Dataout" type="ns1:Data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Sobre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Datain" type="ns1:Data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SobreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Dataout" type="ns1:Data"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://efactura.dgi.gub.uy" targetNamespace="http://efactura.dgi.gub.uy" version="1.0">
+
+  <xs:element name="Datain" type="tns:Data"/>
+
+  <xs:element name="Dataout" type="tns:Data"/>
+
+  <xs:complexType name="Data">
+    <xs:sequence>
+      <xs:element form="qualified" name="xmlData" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Sobre">
+    <wsdl:part element="ns1:Sobre" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SobreResponse">
+    <wsdl:part element="ns1:SobreResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RespuestaSobre">
+    <wsdl:part element="ns1:Sobre" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RespuestaSobreResponse">
+    <wsdl:part element="ns1:RespuestaSobreResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EFacturaIntercambioSoapPort">
+    <wsdl:operation name="RespuestaSobre">
+      <wsdl:input message="ns1:RespuestaSobre" name="RespuestaSobre">
+    </wsdl:input>
+      <wsdl:output message="ns1:RespuestaSobreResponse" name="RespuestaSobreResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sobre">
+      <wsdl:input message="ns1:Sobre" name="Sobre">
+    </wsdl:input>
+      <wsdl:output message="ns1:SobreResponse" name="SobreResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
