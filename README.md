@@ -6,3 +6,7 @@ Propuesta de WSDL para el nuevo servicio de intercambio de comprobantes electró
 
 - Sobre
 - RespuestaSobre
+
+## WSDL
+
+https://raw.githubusercontent.com/azinemanas/efactura-intercambio-wsdl/main/ws_efactura_intercambio.wsdl
