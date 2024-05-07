@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://intercambio.dgi.gub.uy/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://intercambio.efactura.dgi.gub.uy" name="EFacturaIntercambioImplService" targetNamespace="http://intercambio.dgi.gub.uy/">
-  <wsdl:import location="http://127.0.0.1:1234/ePrueba/ws_eprueba?wsdl=EFacturaIntercambioSoapPort.wsdl" namespace="http://intercambio.efactura.dgi.gub.uy">
+  <wsdl:import location="EFacturaIntercambioSoapPort.wsdl" namespace="http://intercambio.efactura.dgi.gub.uy">
     </wsdl:import>
   <wsdl:binding name="EFacturaIntercambioImplServiceSoapBinding" type="ns1:EFacturaIntercambioSoapPort">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
